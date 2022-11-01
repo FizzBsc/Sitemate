@@ -3,12 +3,12 @@ let textDisplay = document.getElementById('textDisplay');
 function addTextNode(text) {
     const newtext = document.createTextNode(text);
     const p1 = document.getElementById("textDisplay");
-    p1.removeChild(p1)
     p1.appendChild(newtext);
 }
 
 function onClick(){
     let isClicked = document.getElementById("isClicked");
+    
     if (!isClicked.classList.contains("modal-open")) {
         isClicked.classList.add("modal-open");
     }
@@ -16,11 +16,14 @@ function onClick(){
 }
 
 function onYes(){
+    
     let isClicked = document.getElementById("isClicked");
     if (isClicked.classList.contains("modal-open")) {
         isClicked.classList.remove("modal-open");
+        
     }
-    addTextNode('You just clicked “yes”’')
+    
+    addTextNode('You just clicked “yes”')
     
 }
 function onCancel(){
@@ -28,5 +31,5 @@ function onCancel(){
     if (isClicked.classList.contains("modal-open")) {
         isClicked.classList.remove("modal-open");
     }
-    addTextNode('You just clicked “cancel”’')
+    addTextNode('You just clicked “cancel”')
 }
