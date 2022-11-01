@@ -2,13 +2,23 @@
 <html>
     <head>
     <link rel="stylesheet" href="SitemateStyle.css">
-    <title>Page Title</title>
+    <title>SiteMate Coding Challenge</title>
+    <script src="Sitemate.js"></script>
     </head>
-    <body>
-
-        <h1 class="body">My First Heading</h1>
-        <button id = 'buttonX'>+</button>
-        <script src="Sitemate.js"></script>
+    <body class="body">
+        
+        <button class="click-me-button" id = 'ClickMeButton' onclick="onClick()">Click Me</button>
+        <div id = "isClicked" class="modal-container">
+            <div class="modal-box">
+                <section>
+                    <h1>Are you sure you want to continue?</h1>
+                    <p><button class = "box-button" onclick="onYes()" id = 'onYes'>Yes</button><button class = "box-button" onclick="onCancel()">Cancel</button></p>
+                </section>
+            </div>
+            
+        </div>
+        <span class = "text-display" id = 'textDisplay'></span>
+       
 
     </body>
 </html>

@@ -1,7 +1,32 @@
-let PlusButton = document.getElementById("buttonX")
+let textDisplay = document.getElementById('textDisplay');
 
-let x = 0
-PlusButton.addEventListener('click', function(){
-    x++
-    console.log(x)
-})
+function addTextNode(text) {
+    const newtext = document.createTextNode(text);
+    const p1 = document.getElementById("textDisplay");
+    p1.removeChild(p1)
+    p1.appendChild(newtext);
+}
+
+function onClick(){
+    let isClicked = document.getElementById("isClicked");
+    if (!isClicked.classList.contains("modal-open")) {
+        isClicked.classList.add("modal-open");
+    }
+    
+}
+
+function onYes(){
+    let isClicked = document.getElementById("isClicked");
+    if (isClicked.classList.contains("modal-open")) {
+        isClicked.classList.remove("modal-open");
+    }
+    addTextNode('You just clicked “yes”’')
+    
+}
+function onCancel(){
+    let isClicked = document.getElementById("isClicked");
+    if (isClicked.classList.contains("modal-open")) {
+        isClicked.classList.remove("modal-open");
+    }
+    addTextNode('You just clicked “cancel”’')
+}
