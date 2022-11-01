@@ -1,9 +1,8 @@
 let textDisplay = document.getElementById('textDisplay');
 
 function addTextNode(text) {
-    const newtext = document.createTextNode(text);
     const p1 = document.getElementById("textDisplay");
-    p1.appendChild(newtext);
+    p1.textContent = text;
 }
 
 function onClick(){
@@ -23,7 +22,7 @@ function onYes(){
         
     }
     
-    addTextNode('You just clicked “yes”')
+    addTextNode('You just clicked “yes”');
     
 }
 function onCancel(){
